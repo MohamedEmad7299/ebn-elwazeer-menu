@@ -1769,27 +1769,133 @@ body[dir="ltr"] .branch-search-input {
 
 @media (max-width: 768px) {
   body {
-    padding-bottom: 68px;
+    padding-bottom: 72px;
   }
 
-  .nav-btn .label {
-    display: none;
+  /* Header: Slim, Comfortable 58px Mobile App Bar */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 58px;
+    height: 58px;
+    background: rgba(10, 17, 13, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    overflow: visible;
+  }
+
+  .nav-container {
+    padding: 0.45rem 0.85rem;
+    min-height: 58px;
+    height: 58px;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: visible;
+  }
+
+  .brand-wrapper {
+    gap: 0.5rem;
+    min-width: 0;
+    flex-shrink: 1;
+    overflow: hidden;
+  }
+
+  .brand-emblem {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .brand-text h1 {
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Completely hide the long 5-star subtitle on mobile header so it NEVER stacks vertically! */
+  .brand-subtitle-badge {
+    display: none !important;
+  }
+
+  /* Header actions on mobile: Compact 36x36px icon pills */
+  .nav-actions {
+    gap: 0.4rem;
+    flex-shrink: 0;
+    align-items: center;
   }
 
   .nav-btn {
-    padding: 0.5rem;
+    padding: 0.4rem;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+  }
+
+  .nav-btn .label {
+    display: none !important;
+  }
+
+  /* Hide QR modal trigger in top navbar on mobile, since it's already in the mobile bottom bar */
+  .desktop-only-btn {
+    display: none !important;
+  }
+
+  /* Category tabs sticky bar directly beneath the 58px header */
+  .category-tabs-container {
+    position: sticky;
+    top: 58px;
+    z-index: 85;
+    background: rgba(10, 17, 13, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 0.45rem 0.85rem 0.55rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .category-tabs {
+    padding: 0.15rem 0;
+    gap: 0.4rem;
+  }
+
+  .category-tab {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  /* Menu cards on mobile */
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 
   .hero-section {
-    padding: 2.5rem 0 2rem;
+    padding: 2rem 0 1.5rem;
   }
 
   .hero-title {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .mobile-bottom-bar {

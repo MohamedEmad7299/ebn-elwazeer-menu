@@ -1997,6 +1997,18 @@ MENU_DATA.forEach(item => {
   }
 });
 
+// Header Offset Synchronization for Mobile View
+function updateHeaderOffset() {
+  const header = document.querySelector(".site-header");
+  const tabsContainer = document.querySelector(".category-tabs-container");
+  if (header && tabsContainer && window.innerWidth <= 768) {
+    const h = header.offsetHeight;
+    tabsContainer.style.top = `${h}px`;
+  }
+}
+window.addEventListener("resize", updateHeaderOffset);
+window.addEventListener("orientationchange", updateHeaderOffset);
+
 // DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
   initLanguage();
@@ -2009,6 +2021,7 @@ document.addEventListener("DOMContentLoaded", () => {
   generateQRCode();
   updateUIStrings();
   populateBranchSelect();
+  updateHeaderOffset();
 });
 
 // Language Setup
@@ -2031,6 +2044,7 @@ function initLanguage() {
       renderBranches();
       renderCartDrawer();
       updateCartBadge();
+      updateHeaderOffset();
     });
   }
 }
