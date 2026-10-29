@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مطاعم ابن الوزير | المنيو الإلكتروني والطلب عبر واتساب</title>
+  <meta name="description" content="المنيو الإلكتروني الرسمي لمطاعم ابن الوزير بالبلينا. تصفح أشهى المشويات، البروست المقرمش، البيتزا، الكريبات وحلويات ابن الوزير مع خدمة التوصيل السريع والطلب المباشر عبر واتساب.">
+  <meta name="theme-color" content="#16a34a">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="مطاعم ابن الوزير | المنيو الرسمي والطلب السريع">
+  <meta property="og:description" content="أشهى المشويات على الفحم، الدجاج البروست المقرمش، البيتزا الإيطالية والحلويات بالبلينا - تصفح المنيو واطلب الآن!">
+  <meta property="og:image" content="./assets/images/menu-cover.jpg">
+
+  <!-- Favicon: Chef Crown / Emerald SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'><path d='M12 2l2.4 4.8 5.3.8-3.8 3.7.9 5.3L12 16.1l-4.8 2.5.9-5.3-3.8-3.7 5.3-.8L12 2z'/></svg>">
+
+  <!-- Google Fonts: Cairo (Arabic) & Outfit (English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css?v=1.0.0">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#" class="brand-wrapper">
+        <div class="brand-emblem">
+          <img src="./assets/images/chef-emblem.png" alt="شعار مطاعم ابن الوزير" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'brand-emblem-fallback\'>👨‍🍳</span>';">
+        </div>
+        <div class="brand-text">
+          <h1>مطاعم <span>ابن الوزير</span></h1>
+          <span class="brand-subtitle-badge">
+            <span>★ ★ ★ ★ ★</span>
+            <span data-i18n="brandSubtitle">أشهى المشويات والبروست</span>
+          </span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <button id="langToggleBtn" class="nav-btn lang-switch-btn" title="تغيير اللغة / Switch Language">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+          </svg>
+          <span id="langBtnText">English</span>
+        </button>
+
+        <!-- QR Code Modal Trigger -->
+        <button class="nav-btn" data-open-modal="qrModal" title="رمز QR للمنيو">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+          </svg>
+          <span class="label" data-i18n="navQR">رمز QR</span>
+        </button>
+
+        <!-- Primary Phone Hotline -->
+        <a href="tel:01010707662" class="nav-btn primary" title="اتصال فوري">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span class="label" data-i18n="navCall">01010707662</span>
+        </a>
+
+        <!-- Cart Button -->
+        <button class="nav-btn cart-toggle-btn" data-open-modal="cartModal" title="سلة الطلب">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="label" data-i18n="navCart">طلبك</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-glow-blob"></div>
+    <div class="container hero-content">
+      <div class="hero-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+
+      <div class="hero-badge">
+        <span data-i18n="heroBadge">أشهى المأكولات والمشويات والبروست والحلويات ⭐</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span data-i18n="heroTitle">مطاعم ابن الوزير</span>
+        <span class="highlight"> - Ebn Elwazeer</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="heroSubtitle">
+        قائمة طعام فاخرة تجمع بين مشويات الفحم الشهية، البروست المقرمش، البيتزا الإيطالية، الكريبات، وحلويات ابن الوزير المميزة في البلينا
+      </p>
+
+      <!-- Direct Hotline Dialers -->
+      <div class="hotline-pills">
+        <a href="tel:01010707662" class="hotline-btn">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>01010707662</span>
+        </a>
+        <a href="tel:01200609038" class="hotline-btn">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>01200609038</span>
+        </a>
+        <a href="tel:01064720045" class="hotline-btn">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>01064720045</span>
+        </a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="hero-cta-group">
+        <a href="#menuAnchor" class="cta-btn primary">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          <span data-i18n="ctaMenu">تصفح المنيو</span>
+        </a>
+        <a href="#branchesSection" class="cta-btn secondary">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span data-i18n="ctaBranches">العنوان والخرائط</span>
+        </a>
+        <button class="cta-btn secondary" data-open-modal="flyerModal">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span data-i18n="ctaFlyer">عرض المنيو الأصلي</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container" id="menuAnchor">
+
+    <!-- Special Alert: Branch Info Banner -->
+    <div class="alert-card">
+      <div class="alert-info">
+        <div class="alert-icon">📍</div>
+        <div class="alert-text">
+          <h3 data-i18n="branchAlertTitle">فرع البلينا الرئيسي - مفتوح يومياً لخدمتكم!</h3>
+          <p data-i18n="branchAlertDesc">البلينا - شارع مجلس المدينة - بجوار بنك مصر القديم</p>
+        </div>
+      </div>
+      <div class="alert-actions">
+        <a href="https://www.google.com/maps/search/?api=1&query=مجلس+المدينة+البلينا+سوهاج" target="_blank" rel="noopener noreferrer" class="pill-btn">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+          <span data-i18n="btnOpenMap">عرض على الخريطة</span>
+        </a>
+        <a href="tel:01010707662" class="pill-btn outline">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span data-i18n="btnCallBranch">اتصال بالمطعم</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Search Box -->
+    <div class="menu-controls">
+      <div class="search-box-wrapper">
+        <svg class="search-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input 
+          type="text" 
+          id="menuSearchInput" 
+          class="search-input" 
+          placeholder="ابحث عن أي وجبة، بيتزا، بروست، أو حِلو..." 
+          data-i18n="searchPlaceholder"
+          autocomplete="off"
+        >
+      </div>
+    </div>
+
+    <!-- Sticky Category Filter Tabs -->
+    <div class="category-tabs-container">
+      <div class="category-tabs">
+        <button class="category-tab active" data-category="all">
+          <span>🍽️</span>
+          <span data-i18n="tabAll">الكل</span>
+        </button>
+        <button class="category-tab" data-category="broast">
+          <span>🍗</span>
+          <span data-i18n="tabBroast">بروست واستربس</span>
+        </button>
+        <button class="category-tab" data-category="pizza">
+          <span>🍕</span>
+          <span data-i18n="tabPizza">بيتزا إيطالي</span>
+        </button>
+        <button class="category-tab" data-category="crepes">
+          <span>🌯</span>
+          <span data-i18n="tabCrepes">كريبات</span>
+        </button>
+        <button class="category-tab" data-category="shawarma">
+          <span>🥙</span>
+          <span data-i18n="tabShawarma">شاورما وفتة</span>
+        </button>
+        <button class="category-tab" data-category="grills">
+          <span>🔥</span>
+          <span data-i18n="tabGrills">مشويات وكومبو</span>
+        </button>
+        <button class="category-tab" data-category="meals">
+          <span>🍱</span>
+          <span data-i18n="tabMeals">وجبات ومكس</span>
+        </button>
+        <button class="category-tab" data-category="sandwiches">
+          <span>🥪</span>
+          <span data-i18n="tabSandwiches">سندوتشات وبيرجر</span>
+        </button>
+        <button class="category-tab" data-category="pasta">
+          <span>🍝</span>
+          <span data-i18n="tabPasta">باستا وأرز</span>
+        </button>
+        <button class="category-tab" data-category="desserts">
+          <span>🍯</span>
+          <span data-i18n="tabDesserts">حلو ابن الوزير</span>
+        </button>
+        <button class="category-tab" data-category="sides">
+          <span>🍟</span>
+          <span data-i18n="tabSides">مقبلات ومشروبات</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Items Grid Container -->
+    <div class="menu-grid" id="menuContainer">
+      <!-- Dynamically generated via app.js -->
+    </div>
+
+    <!-- Flyer Callout Banner -->
+    <div class="flyer-banner">
+      <div class="flyer-info">
+        <h3 data-i18n="flyerModalTitle">المنيو والبروشور الأصلي المطبوع</h3>
+        <p data-i18n="flyerBannerDesc">يمكنك تصفح النسخة الورقية المطبوعة بجميع الأقسام والأسعار بدقة فائقة</p>
+      </div>
+      <button class="flyer-btn" data-open-modal="flyerModal">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+        <span data-i18n="ctaFlyer">عرض المنيو الأصلي</span>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Location & Branches Section -->
+  <section class="branches-section" id="branchesSection">
+    <div class="container">
+      <div class="branches-header">
+        <h2 data-i18n="branchesSectionTitle">موقعنا وخدمة التوصيل - مطاعم ابن الوزير</h2>
+        <p data-i18n="branchesSectionSubtitle">تفضل بزيارتنا في فرعنا بالبلينا أو اطلب خدمة التوصيل السريع حتى باب بيتك</p>
+      </div>
+
+      <!-- Branches Grid -->
+      <div class="branches-grid" id="branchesContainer">
+        <!-- Dynamically generated via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer & Developer Credit Section -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 data-i18n="footerBrandTitle" data-i18n-html="true">مطاعم <span>ابن الوزير</span> 👑</h2>
+          <p data-i18n="footerAbout">مطاعم ابن الوزير - الوجهة الأولى لعشاق المشويات على الفحم، الدجاج البروست المقرمش، البيتزا الغنية، والكريبات في البلينا، بأعلى معايير النظافة والجودة.</p>
+          <div class="footer-hotlines">
+            <a href="tel:01010707662" class="footer-phone-link">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>01010707662 (واتساب & اتصال)</span>
+            </a>
+            <a href="tel:01200609038" class="footer-phone-link">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>01200609038 (خط الدليفري 2)</span>
+            </a>
+            <a href="tel:01064720045" class="footer-phone-link">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>01064720045 (خط الدليفري 3)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 data-i18n="navMenu">أقسام المنيو</h3>
+          <ul class="footer-links">
+            <li><a href="#menuAnchor" onclick="selectCategory('broast')" data-i18n="tabBroast">بروست واستربس</a></li>
+            <li><a href="#menuAnchor" onclick="selectCategory('pizza')" data-i18n="tabPizza">بيتزا إيطالي</a></li>
+            <li><a href="#menuAnchor" onclick="selectCategory('crepes')" data-i18n="tabCrepes">كريبات</a></li>
+            <li><a href="#menuAnchor" onclick="selectCategory('grills')" data-i18n="tabGrills">مشويات وكومبو</a></li>
+            <li><a href="#menuAnchor" onclick="selectCategory('desserts')" data-i18n="tabDesserts">حلو ابن الوزير</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 data-i18n="navBranches">العنوان والطلب</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.google.com/maps/search/?api=1&query=مجلس+المدينة+البلينا+سوهاج" target="_blank" rel="noopener noreferrer">البلينا - شارع مجلس المدينة</a></li>
+            <li><a href="tel:01010707662">خدمة التوصيل السريع</a></li>
+            <li><a href="#menuAnchor">حجز الوجبات العائلية</a></li>
+            <li><a href="#" onclick="openModal('flyerModal')">البروشور الأصلي المطبوع</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-line" data-i18n="footerCopyright" data-i18n-html="true">&copy; 2026 مطاعم ابن الوزير - جميع الحقوق محفوظة</p>
+        
+        <!-- Mohamed Emad Developer Credit Bar -->
+        <div class="footer-dev-line">
+          <span class="dev-credit-label" data-i18n="devCreditBy">تصميم وتطوير:</span>
+          <span class="dev-name-highlight">Mohamed Emad</span>
+          <div class="dev-social-bar">
+            <!-- Telephone Dialer -->
+            <a href="tel:+201020766525" class="dev-icon-link phone" title="اتصال هاتفي بالمطور: 01020766525" aria-label="Phone">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/201020766525" target="_blank" rel="noopener noreferrer" class="dev-icon-link whatsapp" title="واتساب المطور: 01020766525" aria-label="WhatsApp">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 2C6.5 2 2 6.5 2 12.03c0 1.97.57 3.8 1.55 5.35L2.24 21.76l4.55-1.28c1.5 1 3.28 1.55 5.24 1.55 5.53 0 10.03-4.5 10.03-10.03 0-5.53-4.5-10-10.03-10zm0 18.35c-1.74 0-3.37-.48-4.78-1.33l-.34-.21-2.7.76.73-2.63-.23-.37c-.94-1.46-1.47-3.18-1.47-4.99 0-4.6 3.74-8.35 8.35-8.35 4.6 0 8.35 3.74 8.35 8.35 0 4.61-3.75 8.35-8.35 8.35zm4.83-6.24c-.26-.13-1.57-.77-1.81-.86-.25-.09-.43-.13-.61.13-.18.26-.7 8.86-.86 1.05-.16.18-.32.21-.59.08-.26-.13-1.12-.41-2.13-1.32-.79-.7-1.32-1.57-1.47-1.83-.16-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.16.18-.26.26-.44.09-.18.04-.33-.02-.46-.07-.13-.61-1.48-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3 1.03 2.56 1.18 2.74.15.18 2.03 3.1 4.92 4.35.69.3 1.22.48 1.64.61.69.22 1.32.19 1.82.12.55-.08 1.57-.64 1.79-1.26.22-.61.22-1.14.15-1.26-.06-.11-.24-.18-.5-.31z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/mohamedemad199912" target="_blank" rel="noopener noreferrer" class="dev-icon-link facebook" title="Facebook" aria-label="Facebook">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ma7amed_3emad/" target="_blank" rel="noopener noreferrer" class="dev-icon-link instagram" title="Instagram" aria-label="Instagram">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/feed/foryou/" target="_blank" rel="noopener noreferrer" class="dev-icon-link linkedin" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/MohamedEmad7299" target="_blank" rel="noopener noreferrer" class="dev-icon-link github" title="GitHub" aria-label="GitHub">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Quick Action Bottom Bar -->
+  <nav class="mobile-bottom-bar">
+    <div class="mobile-bottom-bar-inner">
+      <a href="#menuAnchor" class="mobile-bar-btn">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+        <span data-i18n="navMenu">المنيو</span>
+      </a>
+
+      <a href="#branchesSection" class="mobile-bar-btn">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span data-i18n="navBranches">العنوان</span>
+      </a>
+
+      <a href="tel:01010707662" class="mobile-bar-btn highlight">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span data-i18n="navCall">اتصال</span>
+      </a>
+
+      <button class="mobile-bar-btn" data-open-modal="qrModal">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+        </svg>
+        <span data-i18n="navQR">رمز QR</span>
+      </button>
+
+      <button class="mobile-bar-btn" data-open-modal="cartModal">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <span><span data-i18n="navCart">الطلب</span> <b id="mobileBarCartCount" style="color: var(--gold-light);"></b></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Floating Bottom Checkout Bar (Talabat / Elmenus Style) -->
+  <div id="floatingCartBar" class="floating-cart-bar" style="display: none;" onclick="openModal('cartModal')">
+    <div class="floating-cart-info">
+      <span class="floating-cart-badge">🛍️ <span id="floatCartCount">1</span></span>
+      <span class="floating-cart-total" id="floatCartTotal">0 ج.م</span>
+    </div>
+    <div class="floating-cart-action">
+      <span data-i18n="floatOrderCta">عرض الطلب وإتمام الشراء 💬</span>
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- MODAL: QR Code Generator & Scanner -->
+  <div class="modal-overlay" id="qrModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>
+          <span>📱</span>
+          <span data-i18n="qrModalTitle">امسح رمز QR لفتح المنيو</span>
+        </h3>
+        <button class="modal-close-btn" data-close-modal="qrModal">&times;</button>
+      </div>
+      <div class="modal-body qr-modal-content">
+        <p data-i18n="qrModalDesc">وجّه كاميرا هاتفك المحمول إلى الرمز لفتح المنيو الإلكتروني في أي وقت!</p>
+        
+        <div class="qr-canvas-box" id="qrCanvas">
+          <!-- QRCode injected via JavaScript -->
+        </div>
+
+        <div class="qr-url-text" id="qrUrlDisplay">
+          https://mohamedemad7299.github.io/ebn-elwazeer-menu/
+        </div>
+
+        <div class="qr-actions">
+          <button class="pill-btn" onclick="downloadQRImage()">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span data-i18n="downloadQR">تحميل صورة QR</span>
+          </button>
+          <button class="pill-btn outline" onclick="copyMenuLink()">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <span data-i18n="copyLink">نسخ رابط المنيو</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: WhatsApp Order & Cart Drawer -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>
+          <span>🛍️</span>
+          <span data-i18n="orderModalTitle">سلة الطلب السريع عبر واتساب</span>
+        </h3>
+        <button class="modal-close-btn" data-close-modal="cartModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Selected Items List -->
+        <div class="cart-items-list" id="cartItemsList">
+          <!-- Injected via JavaScript -->
+        </div>
+
+        <!-- Total Row -->
+        <div class="cart-total-row">
+          <span data-i18n="totalPrice">الإجمالي:</span>
+          <span class="amount" id="cartTotalAmount">0 ج.م</span>
+        </div>
+
+        <!-- Order Form Fields -->
+        <div class="order-form-group">
+          <label class="order-form-label" data-i18n="customerName">الاسم الكريم:</label>
+          <input type="text" id="orderCustomerName" class="order-input" data-i18n="placeholderName" placeholder="مثال: أحمد محمد">
+        </div>
+
+        <div class="order-form-group">
+          <label class="order-form-label" data-i18n="customerPhone">رقم الموبايل للتواصل:</label>
+          <input type="tel" id="orderCustomerPhone" class="order-input" data-i18n="placeholderPhone" placeholder="مثال: 01012345678" dir="ltr">
+        </div>
+
+        <div class="order-form-group">
+          <label class="order-form-label" data-i18n="customerBranch">خط الطلب والتوصيل:</label>
+          <button type="button" class="custom-branch-trigger" id="openBranchPickerBtn" onclick="openBranchPicker()" aria-haspopup="dialog" aria-expanded="false">
+            <div class="branch-trigger-main">
+              <span class="branch-trigger-pin">📍</span>
+              <span class="branch-trigger-text" id="selectedBranchDisplay">فرع البلينا الرئيسي (الفرع الأساسي ⭐)</span>
+            </div>
+            <div class="custom-select-arrow" aria-hidden="true">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+          <!-- Native fallback select -->
+          <select id="orderBranchSelect" style="display: none;" tabindex="-1" aria-hidden="true">
+            <!-- Injected via JS -->
+          </select>
+        </div>
+
+        <div class="order-form-group">
+          <label class="order-form-label" data-i18n="customerNotes">ملاحظات إضافية:</label>
+          <input type="text" id="orderCustomerNotes" class="order-input" data-i18n="placeholderNotes" placeholder="مثال: بدون شطة / زيادة كاتشب ومايونيز">
+        </div>
+
+        <button class="cta-btn primary" style="width: 100%; justify-content: center; margin-top: 1rem;" onclick="sendOrderWhatsApp()">
+          <span data-i18n="sendWhatsAppBtn">إرسال الطلب عبر واتساب 💬</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Custom Branch Picker (Bottom-Sheet / Modal with Adjacent Radio Buttons) -->
+  <div class="modal-overlay branch-picker-modal-overlay" id="branchPickerModal">
+    <div class="modal-card branch-picker-card">
+      <div class="modal-header">
+        <h3>
+          <span>📍</span>
+          <span data-i18n="selectBranchTitle">اختر خط الطلب والتوصيل</span>
+        </h3>
+        <button class="modal-close-btn" data-close-modal="branchPickerModal">&times;</button>
+      </div>
+      <div class="modal-body branch-picker-body">
+        <!-- Quick search input -->
+        <div class="branch-picker-search">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input 
+            type="text" 
+            id="branchSearchInput" 
+            class="branch-search-input" 
+            placeholder="ابحث في خطوط الطلب..." 
+            data-i18n="searchBranchPlaceholder"
+            autocomplete="off"
+            oninput="filterBranchPickerList(this.value)"
+          >
+        </div>
+
+        <!-- Branch Radio List -->
+        <div class="branch-radio-list" id="branchRadioList" role="radiogroup" aria-label="Branch selection">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Original Menu Flyer Lightbox -->
+  <div class="modal-overlay" id="flyerModal">
+    <div class="modal-card wide">
+      <div class="modal-header">
+        <h3>
+          <span>📄</span>
+          <span data-i18n="flyerModalTitle">المنيو والبروشور الأصلي المطبوع</span>
+        </h3>
+        <button class="modal-close-btn" data-close-modal="flyerModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="flyer-tabs">
+          <button id="flyerTabCover" class="flyer-tab-btn active" onclick="switchFlyerTab('cover')" data-i18n="flyerCoverTab">
+            غلاف المنيو والعنوان
+          </button>
+          <button id="flyerTabMenu" class="flyer-tab-btn" onclick="switchFlyerTab('menu')" data-i18n="flyerMenuTab">
+            قائمة الأصناف والأسعار
+          </button>
+        </div>
+        <div class="flyer-preview-frame">
+          <img id="flyerImgCover" src="./assets/images/menu-cover.jpg" alt="غلاف مطاعم ابن الوزير - المشويات والحلويات والعنوان">
+          <img id="flyerImgMenu" src="./assets/images/menu-items.jpg" alt="منيو أسعار مطاعم ابن الوزير - البروست والبيتزا والكريبات" style="display: none;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/qrcode.min.js"></script>
+  <script src="./assets/js/app.js?v=1.0.0"></script>
+</body>
+</html>
